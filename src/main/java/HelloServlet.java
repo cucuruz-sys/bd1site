@@ -13,7 +13,8 @@ public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter printWriter = resp.getWriter();
-        printWriter.write("Hello!");
+        AdvertsDAO a = (AdvertsDAO)getServletContext().getAttribute("AdvertsDAO");
+        printWriter.write(a.get(1).toString());
         printWriter.close();
     }
 }
