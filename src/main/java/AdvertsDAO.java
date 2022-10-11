@@ -3,6 +3,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 public class AdvertsDAO implements DAO<Advert> {
     private DataSource dataSource;
@@ -36,6 +38,26 @@ public class AdvertsDAO implements DAO<Advert> {
     }
 
 
+    public <Advert> list() {
+        List<Advert> list = new LinkedList<>();
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement =
+                        connection.prepareStatement ("SELECT * FROM adverts ORDER BY name");
+                                ResultSet rs = preparedStatement.executeQuery();
+        ) {
+            while (rs.next()) {
+                Advert obj = new Advert();
+                obj.setId(rs.getLong("id"));
+                obj.setName(rs.getString("Name"));
+                list.add(obj);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
     public void delete(long id) throws SQLException {
         try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement =
@@ -49,15 +71,18 @@ public class AdvertsDAO implements DAO<Advert> {
     }
 
 
-    public void edit(long id) throws SQLException {
-        try (Connection connection = dataSource.getConnection();
-             PreparedStatement preparedStatement =
-                     connection.prepareStatement("DELETE FROM adverts WHERE id = ?");
+    public long edit(Advert obj) throws SQLException {
+        try (
+                Connection connection = dataSource.getConnection();
+                PreparedStatement preparedStatement =
+                        connection.prepareStatement("UPDATE adverts SET name = ? WHERE id = ?")
         ) {
-            preparedStatement.setLong(1, id);
+            preparedStatement.setString(1, obj.getName());
+            preparedStatement.setLong(2, obj.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return obj.getId();
     }
 }
