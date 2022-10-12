@@ -6,10 +6,10 @@ import java.sql.Date;
 @Data
 public class Advert {
     private long id;
-    private long idUser;
+    private long id_user;
     private String name;
     private int price;
-    private String pictureRef;
+    private String picture_ref;
     private int category;
     private Date date;
 }

@@ -23,12 +23,12 @@ public class AdvertsDAO implements DAO<Advert> {
             if (rs.next()) {
                 Advert obj = new Advert();
                 obj.setId(rs.getLong("id"));
-                obj.setName(rs.getString("Name"));
-                obj.setIdUser(rs.getLong("idUser"));
-                obj.setPrice(rs.getInt("Price"));
-                obj.setPictureRef(rs.getString("PictureRef"));
-                obj.setCategory(rs.getInt("Category"));
-                obj.setDate(rs.getDate("Date"));
+                obj.setName(rs.getString("name"));
+                obj.setId_user(rs.getLong("id_user"));
+                obj.setPrice(rs.getInt("price"));
+                obj.setPicture_ref(rs.getString("picture_ref"));
+                obj.setCategory(rs.getInt("category"));
+                obj.setDate(rs.getDate("date"));
                 return obj;
             }
         } catch (SQLException e) {
@@ -38,7 +38,7 @@ public class AdvertsDAO implements DAO<Advert> {
     }
 
 
-    public <Advert> list() {
+    public List<Advert> list() {
         List<Advert> list = new LinkedList<>();
         try (
                 Connection connection = dataSource.getConnection();
@@ -49,7 +49,7 @@ public class AdvertsDAO implements DAO<Advert> {
             while (rs.next()) {
                 Advert obj = new Advert();
                 obj.setId(rs.getLong("id"));
-                obj.setName(rs.getString("Name"));
+                obj.setName(rs.getString("name"));
                 list.add(obj);
             }
         } catch (SQLException e) {
