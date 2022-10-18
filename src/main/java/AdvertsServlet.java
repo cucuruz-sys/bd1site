@@ -9,8 +9,7 @@ import java.util.List;
 @WebServlet(name = "AdvertsServlet", urlPatterns = {"/adverts"})
 
 public class AdvertsServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
-            javax.servlet.ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         AdvertsDAO advertsDAO = (AdvertsDAO)this.getServletContext().getAttribute("AdvertsDAO");
         if (request.getParameter("id") == null) {
             response.setContentType("text/html;charset=UTF-8");

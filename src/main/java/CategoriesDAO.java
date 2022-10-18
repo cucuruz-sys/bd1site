@@ -6,30 +6,25 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class AdvertsDAO implements DAO<Advert> {
+public class CategoriesDAO implements DAO<Category> {
     private DataSource dataSource;
-    public AdvertsDAO(DataSource dataSource) {
+    public CategoriesDAO(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
-    public Advert get(long id){
+    public Category get(long id){
         System.out.println("get " + id);
         try (
                 Connection connection = dataSource.getConnection();
-                PreparedStatement ps = connection.prepareStatement("SELECT * FROM adverts WHERE id = ?");
+                PreparedStatement ps = connection.prepareStatement("SELECT * FROM categories WHERE id = ?");
         ) {
             ps.setLong(1, id);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                Advert obj = new Advert();
+                Category obj = new Category();
                 obj.setId(rs.getLong("id"));
                 obj.setName(rs.getString("name"));
-                obj.setId_user(rs.getLong("id_user"));
-                obj.setPrice(rs.getInt("price"));
-                obj.setPicture_ref(rs.getString("picture_ref"));
-                obj.setCategory(rs.getInt("category"));
-                obj.setDate(rs.getDate("date"));
                 return obj;
             }
         } catch (SQLException e) {
@@ -39,16 +34,16 @@ public class AdvertsDAO implements DAO<Advert> {
     }
 
 
-    public List<Advert> list() {
-        List<Advert> list = new LinkedList<>();
+    public List<Category> list() {
+        List<Category> list = new LinkedList<>();
         try (
                 Connection connection = dataSource.getConnection();
                 PreparedStatement preparedStatement =
-                        connection.prepareStatement ("SELECT * FROM adverts ORDER BY name");
-                                ResultSet rs = preparedStatement.executeQuery();
+                        connection.prepareStatement ("SELECT * FROM categories ORDER BY name");
+                ResultSet rs = preparedStatement.executeQuery();
         ) {
             while (rs.next()) {
-                Advert obj = new Advert();
+                Category obj = new Category();
                 obj.setId(rs.getLong("id"));
                 obj.setName(rs.getString("name"));
                 list.add(obj);
@@ -62,7 +57,7 @@ public class AdvertsDAO implements DAO<Advert> {
     public void delete(long id) throws SQLException {
         try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement =
-                     connection.prepareStatement("DELETE FROM adverts WHERE id = ?");
+                     connection.prepareStatement("DELETE FROM categories WHERE id = ?");
         ) {
             preparedStatement.setLong(1, id);
             preparedStatement.executeUpdate();
@@ -72,11 +67,11 @@ public class AdvertsDAO implements DAO<Advert> {
     }
 
 
-    public long edit(Advert obj) throws SQLException {
+    public long edit(Category obj) throws SQLException {
         try (
                 Connection connection = dataSource.getConnection();
                 PreparedStatement preparedStatement =
-                        connection.prepareStatement("UPDATE adverts SET name = ? WHERE id = ?")
+                        connection.prepareStatement("UPDATE categories SET name = ? WHERE id = ?")
         ) {
             preparedStatement.setString(1, obj.getName());
             preparedStatement.setLong(2, obj.getId());

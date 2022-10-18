@@ -14,7 +14,8 @@ public class HelloServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter printWriter = resp.getWriter();
         AdvertsDAO a = (AdvertsDAO)getServletContext().getAttribute("AdvertsDAO");
-        printWriter.write(a.get(1).toString());
+        //printWriter.write(a.get(1).toString());
+        printWriter.write("I hate biggers");
         printWriter.close();
     }
 }

@@ -10,7 +10,7 @@ public class DbInitListener implements ServletContextListener
 {
     public void contextInitialized(ServletContextEvent sce) {
         // создание пула соединений с базой данных
-        PGSimpleDataSource poolingDataSource = new  PGSimpleDataSource();
+        PGSimpleDataSource poolingDataSource = new PGSimpleDataSource();
         // пропущена установка параметров соединения
         poolingDataSource.setUser("postgres");
         poolingDataSource.setPassword("5656");
@@ -18,6 +18,7 @@ public class DbInitListener implements ServletContextListener
         // создание DAO-объектов
         AdvertsDAO advertsDAO = new AdvertsDAO(poolingDataSource);
         ServletContext sc = sce.getServletContext();
+
         // сохранение инициализированных объектов в контекст сервлетов
         sc.setAttribute("AdvertsDAO", advertsDAO);
         sc.setAttribute("datasource", poolingDataSource);
