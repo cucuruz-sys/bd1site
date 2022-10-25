@@ -8,13 +8,14 @@
 </head>
 <body>
 <div class="advert">
+    <h class="advert-text">${advert.name}</h>
     <h class="advert-text">Category: ${advert.category}</h>
     <h class="advert-text">Id: ${advert.id}</h>
     <h class="advert-text">User: ${advert.id_user}</h>
     <h class="advert-text">Price: ${advert.price}</h>
     <h class="advert-text">${advert.date}</h>
     <c:if test="${not empty advert.picture_ref}">
-        <div style="scale: 80%">
+        <div class="advert-image">
             <img src="${advert.picture_ref}">
         </div>
     </c:if>

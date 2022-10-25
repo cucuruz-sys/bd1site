@@ -9,16 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b54358f9-5277-44f2-8b64-eb212ddfd69f" name="Changes" comment="Create list of adverts">
-      <change afterPath="$PROJECT_DIR$/src/main/bd1site/Images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/bd1site/Images/placeholder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/bd1site/Images/plus.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2022_12_44_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2022_12_44_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="b54358f9-5277-44f2-8b64-eb212ddfd69f" name="Changes" comment="fixing advert">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Css/adverts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Css/adverts.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/advert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/advert.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/adverts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/adverts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdvertsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdvertsDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +191,7 @@
       <workItem from="1666082515625" duration="7531000" />
       <workItem from="1666114712227" duration="2295000" />
       <workItem from="1666123327728" duration="660000" />
-      <workItem from="1666723488139" duration="2754000" />
+      <workItem from="1666723488139" duration="4233000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1664992767568</created>
@@ -241,7 +235,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665606958637</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixing advert">
+      <created>1666726472499</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666726472499</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixing advert">
+      <created>1666726479747</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666726479747</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +284,7 @@
     <MESSAGE value="2" />
     <MESSAGE value="3" />
     <MESSAGE value="Create list of adverts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create list of adverts" />
+    <MESSAGE value="fixing advert" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing advert" />
   </component>
 </project>

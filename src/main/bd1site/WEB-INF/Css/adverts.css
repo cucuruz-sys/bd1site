@@ -89,6 +89,7 @@ body {
     font-weight: 400;
     color: #4A4A40;
     font-style: italic;
+    display: block;
 }
 
 .advert{
@@ -98,6 +99,14 @@ body {
     justify-content: center;
     align-items: center;
     height: auto;
+}
+
+.advert-image{
+    display: flex;
+    height: 60%;
+    width: 60%;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 @media (min-width: 768px) {
