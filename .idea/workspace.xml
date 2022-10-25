@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b54358f9-5277-44f2-8b64-eb212ddfd69f" name="Changes" comment="fixing advert">
+    <list default="true" id="b54358f9-5277-44f2-8b64-eb212ddfd69f" name="Changes" comment="completed adverts list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Css/adverts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Css/adverts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/advert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/advert.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/adverts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/adverts.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,8 @@
       <workItem from="1666082515625" duration="7531000" />
       <workItem from="1666114712227" duration="2295000" />
       <workItem from="1666123327728" duration="660000" />
-      <workItem from="1666723488139" duration="4233000" />
+      <workItem from="1666723488139" duration="4271000" />
+      <workItem from="1666728817124" duration="870000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1664992767568</created>
@@ -249,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666726479747</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="completed adverts list">
+      <created>1666727788068</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666727788068</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +293,7 @@
     <MESSAGE value="3" />
     <MESSAGE value="Create list of adverts" />
     <MESSAGE value="fixing advert" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing advert" />
+    <MESSAGE value="completed adverts list" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed adverts list" />
   </component>
 </project>

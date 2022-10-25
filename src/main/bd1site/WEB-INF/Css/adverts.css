@@ -78,7 +78,7 @@ body {
     font-weight: 500;
 }
 .post-title {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 400;
     color: #4A4A40;
     font-style: italic;
@@ -89,7 +89,8 @@ body {
     font-weight: 400;
     color: #4A4A40;
     font-style: italic;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
 .advert{

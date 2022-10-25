@@ -7,6 +7,7 @@
   <title>Adverts info</title>
 </head>
 <body>
+<h1 class="advert-text">Все объявления</h1>
 <div class="post-wrap">
   <c:forEach items="${adverts}" var="advert">
   <div class="post-item">
