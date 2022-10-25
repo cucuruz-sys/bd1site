@@ -29,7 +29,6 @@ public class AdvertsDAO implements DAO<Advert> {
                 obj.setId_user(rs.getLong("id_user"));
                 obj.setPrice(rs.getInt("price"));
                 obj.setPicture_ref(rs.getString("picture_ref"));
-                System.out.println(obj.getPicture_ref());
                 obj.setDate(rs.getDate("date"));
                 ps2.setLong(1, rs.getLong("category"));
                 ResultSet rs2 = ps2.executeQuery();
@@ -51,11 +50,20 @@ public class AdvertsDAO implements DAO<Advert> {
                 PreparedStatement preparedStatement =
                         connection.prepareStatement ("SELECT * FROM adverts ORDER BY name");
                                 ResultSet rs = preparedStatement.executeQuery();
+                PreparedStatement ps2 = connection.prepareStatement("SELECT * FROM categories WHERE id = ?");
         ) {
             while (rs.next()) {
                 Advert obj = new Advert();
                 obj.setId(rs.getLong("id"));
                 obj.setName(rs.getString("name"));
+                obj.setId_user(rs.getLong("id_user"));
+                obj.setPrice(rs.getInt("price"));
+                obj.setPicture_ref(rs.getString("picture_ref"));
+                obj.setDate(rs.getDate("date"));
+                ps2.setLong(1, rs.getLong("category"));
+                ResultSet rs2 = ps2.executeQuery();
+                rs2.next();
+                obj.setCategory(rs2.getString("name"));
                 list.add(obj);
             }
         } catch (SQLException e) {
