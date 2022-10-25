@@ -10,6 +10,6 @@ public class Advert {
     private String name;
     private int price;
     private String picture_ref;
-    private int category;
+    private String category;
     private Date date;
 }

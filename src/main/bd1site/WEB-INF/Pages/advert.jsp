@@ -3,28 +3,16 @@
 
 <html>
 <head>
-    <title>Детальная информация о фильме ${film.title}</title>
+    <title>Детальная информация об объявлении ${advert.name}</title>
 </head>
 <body>
-<h1>${film.title}</h1> <span>${film.releaseYear}</span>
-<div>Рейтинг MPAA: ${film.mpaaRating}</div>
-<div>${film.description}</div>
-<div>Язык: ${film.language.language}</div>
-<c:if test="${not empty requestScope.film.categories}">
+<h1>${advert.name}</h1> <span>${advert.date}</span>
+<div>Цена: ${advert.price}</div>
+<div>Категория: ${advert.category}</div>
+<div>Id пользователя: ${advert.id_user}</div>
+<c:if test="${not empty advert.picture_ref}">
     <div>
-        <c:forEach items="${requestScope.film.categories}"
-                   var="category">
-            <span>${category.name}</span>
-        </c:forEach>
-    </div>
-</c:if>
-<c:if test="${not empty film.actors}">
-    <div>
-        <h1>Актеры фильма</h1>
-        <c:forEach items="${requestScope.film.actors}"
-                   var="actor" varStatus="st">${st.first ? '' : ', '}<a
-                href="actor?id=${actor.id}">${actor.firstName}
-                ${actor.lastName}</a></c:forEach>
+        <img src="${advert.picture_ref}">
     </div>
 </c:if>
 </body>

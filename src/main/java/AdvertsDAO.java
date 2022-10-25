@@ -17,6 +17,7 @@ public class AdvertsDAO implements DAO<Advert> {
         try (
                 Connection connection = dataSource.getConnection();
                 PreparedStatement ps = connection.prepareStatement("SELECT * FROM adverts WHERE id = ?");
+                PreparedStatement ps2 = connection.prepareStatement("SELECT * FROM categories WHERE id = ?");
         ) {
             ps.setLong(1, id);
             ResultSet rs = ps.executeQuery();
@@ -28,8 +29,12 @@ public class AdvertsDAO implements DAO<Advert> {
                 obj.setId_user(rs.getLong("id_user"));
                 obj.setPrice(rs.getInt("price"));
                 obj.setPicture_ref(rs.getString("picture_ref"));
-                obj.setCategory(rs.getInt("category"));
+                System.out.println(obj.getPicture_ref());
                 obj.setDate(rs.getDate("date"));
+                ps2.setLong(1, rs.getLong("category"));
+                ResultSet rs2 = ps2.executeQuery();
+                rs2.next();
+                obj.setCategory(rs2.getString("name"));
                 return obj;
             }
         } catch (SQLException e) {
