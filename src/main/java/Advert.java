@@ -9,7 +9,8 @@ public class Advert {
     private long id_user;
     private String name;
     private int price;
-    private String picture_ref;
     private String category;
+    private long categoryid;
     private Date date;
+    private String description;
 }

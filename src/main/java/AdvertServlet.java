@@ -3,8 +3,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.Date;
+import java.sql.SQLException;
 
 @WebServlet(name = "AdvertServlet", urlPatterns = {"/advert"})
 
@@ -16,7 +18,15 @@ public class AdvertServlet extends HttpServlet {
         AdvertsDAO advertsDAO = (AdvertsDAO) this.getServletContext().getAttribute("AdvertsDAO");
         Long id = Long.parseLong(request.getParameter("id"));
         Advert advert = advertsDAO.get(id);
-
+        String temp = getClass().getProtectionDomain().getCodeSource().getLocation().toString().substring(6).substring(0 ,getClass().getProtectionDomain().getCodeSource().getLocation().toString().substring(6).length() - 16 ) + "Images/id" + String.valueOf(advert.getId()) + ".jpg";
+        File f = new File(temp);
+        String files="";
+        if(f.exists() && !f.isDirectory()) {
+            files = "../Images/id" + String.valueOf(advert.getId()) + ".jpg";
+        } else {
+            files ="../Images/placeholder.jpg";
+        }
+        request.setAttribute("path", files);
         if (advert == null) { response.sendError(404); return; }
         request.setAttribute("advert", advert);
         this.getServletContext()
@@ -32,5 +42,28 @@ public class AdvertServlet extends HttpServlet {
 //        out.print("<div>" + "Цена: " + advert.getPrice() + "</div>");
 //        out.print("<div>" + "Изображение:" + advert.getPicture_ref() + "</div>");
 //        out.print("</body></html>");
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        AdvertsDAO advertsDAO = (AdvertsDAO)this.getServletContext().getAttribute("AdvertsDAO");
+        CategoriesDAO categoriesDAO = (CategoriesDAO)this.getServletContext().getAttribute("CategoriesDAO");
+        Advert advert;
+        request.setCharacterEncoding("UTF-8");
+        if (request.getParameter("id") != null) {
+            long id = Long.parseLong(request.getParameter("id"));
+            advert = advertsDAO.get(id);
+        } else {
+            advert = new Advert();
+        }
+        if (advert == null) {
+            response.sendError(404); return;
+        }
+        try {
+            advertsDAO.delete(Long.parseLong(request.getParameter("id")));
+        } catch (SQLException e) {
+            log("Failed to delete advert", e);
+            response.sendError(500, "Failed to delete advert: " + e.getMessage());
+        }
+        response.sendRedirect("/adverts");
     }
 }

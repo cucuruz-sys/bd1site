@@ -9,10 +9,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b54358f9-5277-44f2-8b64-eb212ddfd69f" name="Changes" comment="completed adverts list">
+    <list default="true" id="b54358f9-5277-44f2-8b64-eb212ddfd69f" name="Changes" comment="in progress adverts list">
+      <change afterPath="$PROJECT_DIR$/src/main/bd1site/Images/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/bd1site/Images/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/add_new_advert.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/edit_advert.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AddNew_Advert_Servlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Edit_Advert_Servlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2022_12_44_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_19_2022_12_44_AM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_25_2022_5_21_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_25_2022_5_21_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/bd1site/Images/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/Images/id2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/bd1site/Images/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/Images/id4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Css/adverts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Css/adverts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/advert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/advert.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/adverts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/Pages/adverts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/bd1site/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Advert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Advert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdvertServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdvertServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdvertsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdvertsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdvertsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdvertsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DbInitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DbInitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +43,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -56,22 +76,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/z2013/Documents/Uchuba/5_sem/SQL/bd1/bd1site/src/main/bd1site/WEB-INF",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\z2013\Documents\Uchuba\5_sem\SQL\bd1\bd1site\src\main\bd1site\WEB-INF" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\z2013\IdeaProjects\bd1site\src\main\bd1site\WEB-INF" />
+      <recent name="C:\Users\z2013\Documents\Uchuba\5_sem\SQL\bd1\bd1site\src\main\bd1site" />
+      <recent name="C:\Users\z2013\Documents\Uchuba\5_sem\SQL\bd1\bd1site\src\main\bd1site\WEB-INF\Pages" />
+      <recent name="C:\Users\z2013\Documents\Uchuba\5_sem\SQL\bd1\bd1site\src\main\bd1site\WEB-INF" />
+      <recent name="C:\Users\z2013\Documents\Uchuba\5_sem\SQL\bd1\bd1site\src\main\resources\Images" />
+      <recent name="C:\Users\z2013\Documents\Uchuba\5_sem\SQL\bd1\bd1site\target" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -187,12 +218,39 @@
       <workItem from="1665516656836" duration="4170000" />
       <workItem from="1665521847229" duration="35000" />
       <workItem from="1665597276644" duration="1330000" />
-      <workItem from="1665605040797" duration="2458000" />
-      <workItem from="1666082515625" duration="7531000" />
-      <workItem from="1666114712227" duration="2295000" />
-      <workItem from="1666123327728" duration="660000" />
-      <workItem from="1666723488139" duration="4271000" />
-      <workItem from="1666728817124" duration="870000" />
+      <workItem from="1665605040797" duration="1773000" />
+      <workItem from="1666165758174" duration="3220000" />
+      <workItem from="1666169400096" duration="1057000" />
+      <workItem from="1666174976167" duration="18000" />
+      <workItem from="1666359646363" duration="131000" />
+      <workItem from="1666542714248" duration="3068000" />
+      <workItem from="1666599335682" duration="2928000" />
+      <workItem from="1666770492822" duration="4842000" />
+      <workItem from="1666781390999" duration="25000" />
+      <workItem from="1667302473539" duration="6812000" />
+      <workItem from="1667326069417" duration="2648000" />
+      <workItem from="1667375640992" duration="2104000" />
+      <workItem from="1667378479772" duration="167000" />
+      <workItem from="1667823080537" duration="23000" />
+      <workItem from="1667917728114" duration="7173000" />
+      <workItem from="1667942818744" duration="594000" />
+      <workItem from="1667980032827" duration="2259000" />
+      <workItem from="1667982327883" duration="1782000" />
+      <workItem from="1667995233710" duration="5000" />
+      <workItem from="1668071210453" duration="127000" />
+      <workItem from="1668121082282" duration="4000" />
+      <workItem from="1668405707091" duration="4803000" />
+      <workItem from="1668411453921" duration="2024000" />
+      <workItem from="1668421233695" duration="3747000" />
+      <workItem from="1668427570626" duration="3107000" />
+      <workItem from="1668689648823" duration="2419000" />
+      <workItem from="1668693090619" duration="265000" />
+      <workItem from="1669016855307" duration="1648000" />
+      <workItem from="1669053226815" duration="7097000" />
+      <workItem from="1669189754482" duration="4320000" />
+      <workItem from="1669205815889" duration="12000" />
+      <workItem from="1669207684039" duration="1795000" />
+      <workItem from="1669764715502" duration="2546000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1664992767568</created>
@@ -229,35 +287,7 @@
       <option name="project" value="LOCAL" />
       <updated>1665521726255</updated>
     </task>
-    <task id="LOCAL-00006" summary="Create list of adverts">
-      <created>1665606958637</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1665606958637</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fixing advert">
-      <created>1666726472499</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1666726472499</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fixing advert">
-      <created>1666726479747</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1666726479747</updated>
-    </task>
-    <task id="LOCAL-00009" summary="completed adverts list">
-      <created>1666727788068</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1666727788068</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,9 +321,6 @@
     <MESSAGE value="1" />
     <MESSAGE value="2" />
     <MESSAGE value="3" />
-    <MESSAGE value="Create list of adverts" />
-    <MESSAGE value="fixing advert" />
-    <MESSAGE value="completed adverts list" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed adverts list" />
+    <option name="LAST_COMMIT_MESSAGE" value="3" />
   </component>
 </project>
